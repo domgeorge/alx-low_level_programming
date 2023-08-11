@@ -8,13 +8,15 @@
 
 int main(void)
 {
-	int b10;
+	int c;
 
-	while (b10 < 10)
+	c = 48;
+
+	while (c <= 57)
 	{
-		printf("%d", b10);
+		putchar(c);
 
-		b10++;
+		c++;
 	}
 
 	putchar('\n');

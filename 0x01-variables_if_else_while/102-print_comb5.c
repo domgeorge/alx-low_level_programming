@@ -3,44 +3,32 @@
 /**
  * main - entry point
  *
- * Return: exits success 0
+ *
+ * Return: exits 0
  */
-
 int main(void)
 {
-	int a = '0';
-	int b;
-	int c;
+	int num1, num2;
 
-	while (a <= '7')
+	for (num1 = 0; num1 <= 98; num1++)
 	{
-		b = a + 1;
-		while (b <= '8')
+		for (num2 = num1 + 1; num2 <= 99; num2++)
 		{
-			c = b + 1;
-			while (c <= '9')
-			{
-				putchar(a);
-				putchar(b);
-				putchar(c);
-				if (a == '7' && b == '8' && c == '9')
-				{
-					putchar('\n');
-				}
-				else
-				{
-					putchar(',');
-					putchar(' ');
-				}
+			putchar((num1 / 10) + '0');
+			putchar((num1 % 10) + '0');
+			putchar(' ');
+			putchar((num2 / 10) + '0');
+			putchar((num2 % 10) + '0');
 
-				c++;
-			}
+			if (num1 == 98 && num2 == 99)
+				continue;
 
-			b++;
+			putchar(',');
+			putchar(' ');
 		}
-
-		a++;
 	}
+
+	putchar('\n');
 
 	return (0);
 }

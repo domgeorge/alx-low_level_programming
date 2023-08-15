@@ -3,7 +3,7 @@
 /**
  * _putchar - prints out a character
  *
- * c: variable for character
+ * @c: variable for character
  */
 
 void _putchar(char c)

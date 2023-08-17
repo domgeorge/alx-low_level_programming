@@ -4,7 +4,7 @@
  * print_diagonal - outputs diagonal lines according
  * to the integer
  * @n: argument for integer
- */ 
+ */
 
 void print_diagonal(int n)
 {

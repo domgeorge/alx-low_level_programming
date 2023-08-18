@@ -19,6 +19,7 @@ void print_number(int n)
 	}
 
 	temp = res;
+
 	while (temp >= 10)
 	{
 		len++;
@@ -36,5 +37,5 @@ void print_number(int n)
 		expo /= 10;
 	}
 
-	_putchar(res % 10 + '0');
+	_putchar((res % 10) + '0');
 }

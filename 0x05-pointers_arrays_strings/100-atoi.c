@@ -1,37 +1,45 @@
 #include "main.h"
-#include <stdio.h>
-#include <limits.h>
 
 /**
- * _atoi - converts integer to string
- * @s: pointer to integer
- * Return: outputs converted number
+ * _adigit - checks whether character is a digit
+ * @s: character to check
+ *
+ * Return: 1 if digit 0 if not
  */
+int _adigit(char s)
+{
+	return (s >= '0' && s <= '9');
+}
 
+/**
+ * _atoi - converts string to integer
+ * @s: pointer to string
+ *
+ * Return: integer values of string
+ */
 int _atoi(char *s)
 {
-	int result = 0;
-	int sign = 1;
-	int i = 0;
+	int i = 0, neg = 0, d;
+	int num = 0;
 
-	while (s[i] == '-' || s[i] == '+')
+	while (s[i])
 	{
 		if (s[i] == '-')
 		{
-			sign = -sign;
+			neg++;
 		}
-		i++;
-	}
-
-	while (s[i] >= '0' && s[i] <= '9')
-	{
-		if (result > (INT_MAX - (s[i] - '0')) / 10)
+		else if (_adigit(s[i]))
 		{
-			return (0);
+			while (_adigit(s[i]))
+			{
+				d = (s[i] - '0');
+				d = neg % 2 ? -d : d;
+				num = num * 10 + d;
+				i++;
+			}
+			break;
 		}
-		result = result * 10 + (s[i] - '0');
 		i++;
 	}
-
-	return (result * sign);
+	return (num);
 }

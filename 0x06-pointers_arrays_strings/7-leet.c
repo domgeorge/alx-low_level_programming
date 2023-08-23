@@ -1,4 +1,6 @@
 #include "main.h"
+#define LEETIN "aAeEoOtTlL"
+#define LEETOUT "4433007711"
 
 /**
  * leet - encodes strings into digits
@@ -8,25 +10,14 @@
 
 char *leet(char *str)
 {
-	char *p = str;
+	char *ret = str, *leetin = LEETIN, *leetout = LEETOUT;
+	int i = 0;
 
-	while (*p)
+	for (; *str; str++)
 	{
-		char c = *p;
-
-		if ((c == 'a' || c == 'A') ||
-		(c == 'e' || c == 'E') ||
-		(c == 'o' || c == 'O') ||
-		(c == 't' || c == 'T') ||
-		(c == 'l' || c == 'L'))
-		{
-			*p = (c == 'a' || c == 'A') ? '4' :
-			(c == 'e' || c == 'E') ? '3' :
-			(c == 'o' || c == 'O') ? '0' :
-			(c == 't' || c == 'T') ? '7' : '1';
-		}
-		p++;
+		for (i = 0; leetin[i]; i++)
+			if (*str == leetin[i])
+				*str = leetout[i];
 	}
-
-	return (str);
+	return (ret);
 }

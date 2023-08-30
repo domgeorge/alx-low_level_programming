@@ -3,7 +3,7 @@
 /**
  * factorial - returns the factorial of a given number
  * @n: argument for integer given numeber
- * Return: -1 if less than 0 
+ * Return: -1 if less than 0
  * 1 if equal to 0 and multiplies with the factorial of
  * numbers it is lesser than
  */

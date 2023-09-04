@@ -7,7 +7,7 @@
  * _strdup - returns a pointer to a newly allocated space in memory,
  * which contains a copy of the string given as a parameter
  * @str: string pointer to char
- * Return: NULL if str is NULL and arr is NULL
+ * Return: 0 if str is NULL and arr is NULL
  * arr is duplicate of str
  */
 
@@ -18,14 +18,14 @@ char *_strdup(char *str)
 
 	if (str == NULL)
 	{
-		return (NULL);
+		return (0);
 	}
 
 	arr = malloc((sizeof(char) * length) + 1);
 
 	if (arr == NULL)
 	{
-		return (NULL);
+		return (0);
 	}
 
 	strcpy(arr, str);

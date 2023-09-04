@@ -1,7 +1,6 @@
 #include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
 
 /**
  * _strdup - returns a pointer to a newly allocated space in memory,
@@ -13,7 +12,14 @@
 
 char *_strdup(char *str)
 {
-	char length = strlen(str);
+	int length = 0;
+	int i = 0;
+
+	while (str[length] != '\0')
+	{
+		length++;
+	}
+
 	char *arr;
 
 	if (str == NULL)
@@ -28,7 +34,11 @@ char *_strdup(char *str)
 		return (0);
 	}
 
-	strcpy(arr, str);
+	while (i <= length)
+	{
+		arr[i] = str[i];
+		i++;
+	}
 
 	return (arr);
 }

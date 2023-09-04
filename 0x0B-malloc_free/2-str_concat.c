@@ -7,34 +7,50 @@
  * str_concat -  concatenates two strings
  * @s1: string pointer to char
  * @s2: string pointer to char
- * Return: arr as the output
+ * Return: pointer
  */
 
 char *str_concat(char *s1, char *s2)
 {
-	int len1 = strlen(s1);
-	int len2 = strlen(s2);
+	int len1, len2, i, j;
 	char *arr;
-	char *nul = "";
 
 	if (s1 == NULL)
 	{
-		s1 = nul;
+		s1 = "";
 	}
 	if (s2 == NULL)
 	{
-		s2 = nul;
+		s2 = "";
 	}
 
-	arr = (char *)malloc(sizeof(char) * (len1 + len2 + 1));
+	len1 = 0, len2 = 0;
 
-	if (arr == NULL)
+	while (*(s1 + len1))
 	{
-		return (NULL);
+		len1++;
+	}
+	while (*(s2 + len2))
+	{
+		len2++;
 	}
 
-	strcpy(arr, s1);
-	strcat(arr, s2);
+	arr = malloc(sizeof(char) * (len1 + len2 + 1));
+
+	if (arr == 0)
+	{
+		return (0);
+	}
+
+	for (i = 0; i < len1; i++)
+	{
+		*(s + i) = *(s1 + i);
+	}
+
+	for (i = 0, j = len1; i <= len2; j++, i++)
+	{
+		*(s + j) = *(s2 + i);
+	}
 
 	return (arr);
 }

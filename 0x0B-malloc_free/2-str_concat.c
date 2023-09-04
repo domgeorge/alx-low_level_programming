@@ -44,12 +44,12 @@ char *str_concat(char *s1, char *s2)
 
 	for (i = 0; i < len1; i++)
 	{
-		*(s + i) = *(s1 + i);
+		*(arr + i) = *(s1 + i);
 	}
 
 	for (i = 0, j = len1; i <= len2; j++, i++)
 	{
-		*(s + j) = *(s2 + i);
+		*(arr + j) = *(s2 + i);
 	}
 
 	return (arr);

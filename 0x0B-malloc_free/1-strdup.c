@@ -16,7 +16,7 @@ char *_strdup(char *str)
 	char length = strlen(str);
 	char *arr;
 
-	if (str == 0)
+	if (str == NULL)
 	{
 		return (NULL);
 	}

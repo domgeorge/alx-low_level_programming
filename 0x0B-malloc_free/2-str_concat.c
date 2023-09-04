@@ -15,14 +15,15 @@ char *str_concat(char *s1, char *s2)
 	int len1 = strlen(s1);
 	int len2 = strlen(s2);
 	char *arr;
+	char *nul = "";
 
 	if (s1 == NULL)
 	{
-		s1 = "";
+		s1 = nul;
 	}
 	if (s2 == NULL)
 	{
-		s2 = "";
+		s2 = nul;
 	}
 
 	arr = (char *)malloc(sizeof(char) * (len1 + len2 + 1));

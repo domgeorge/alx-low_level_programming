@@ -28,9 +28,9 @@ char *str_concat(char *s1, char *s2)
 
 	arr = (char *)malloc(sizeof(char) * (len1 + len2 + 1));
 
-	if (arr == 0)
+	if (arr == NULL)
 	{
-		return (0);
+		return (NULL);
 	}
 
 	strcpy(arr, s1);

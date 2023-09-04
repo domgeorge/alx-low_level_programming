@@ -9,6 +9,7 @@
  * @str: string pointer to char
  * Return: NULL if str is NULL and arr is NULL
  * arr is duplicate of str
+ */
 
 char *_strdup(char *str)
 {

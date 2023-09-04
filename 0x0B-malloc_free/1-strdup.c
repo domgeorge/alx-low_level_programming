@@ -12,6 +12,7 @@
 
 char *_strdup(char *str)
 {
+	char *arr;
 	int length = 0;
 	int i = 0;
 
@@ -19,8 +20,6 @@ char *_strdup(char *str)
 	{
 		length++;
 	}
-
-	char *arr;
 
 	if (str == NULL)
 	{

@@ -3,10 +3,11 @@
 
 /**
  * struct dog - new type
- * @name: member 1
- * @age: member 2
- * @owner: member 3
- * Description: Define a new type struct dog with the member
+ * @name: pet name
+ * @age: pet age
+ * @owner: pet owner
+ * Description: Define a new type struct
+ * dog with the members
  */
 
 struct dog {

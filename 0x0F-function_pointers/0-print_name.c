@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 /**
- * print_name -  prints a name 
+ * print_name - prints a name
  * @name: pointer to char
  * @f: pointer to void function of type char
  */

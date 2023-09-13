@@ -1,4 +1,3 @@
-#include <stddef.h>
 #ifndef FUNCPTS_H
 #define FUNCPTS_H
 

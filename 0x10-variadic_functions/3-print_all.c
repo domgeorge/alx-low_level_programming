@@ -64,7 +64,7 @@ void print_all(const char * const format, ...)
 		{
 			if (format[l1] == fa[l2].tc[0])
 			{
-				printf("%s",spc);
+				printf("%s", spc);
 				fa[l2].tf(lst);
 				spc = ", ";
 			}

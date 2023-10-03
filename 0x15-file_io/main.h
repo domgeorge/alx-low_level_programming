@@ -9,6 +9,7 @@
 #include <sys/stat.h>
 #include <string.h>
 #include <errno.h>
+#include <elf.h>
 
 #define BUFSIZE 1024
 

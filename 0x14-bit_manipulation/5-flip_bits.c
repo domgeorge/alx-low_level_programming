@@ -1,23 +1,21 @@
 #include "main.h"
 
 /**
- * flip_bits - Counts the number of bits to flip to get from n to m.
- * @n: The first unsigned long integer.
- * @m: The second unsigned long integer.
+ * flip_bits - Counts the number of bits to flip to get from n to m
+ * @n: number one
+ * @m: number two
  *
- * Return: The number of bits to flip.
+ * Return: number of bits
  */
 unsigned int flip_bits(unsigned long int n, unsigned long int m)
 {
-	unsigned long int xor_result = n ^ m;
-	unsigned int count = 0;
+	unsigned int nbits;
 
-	while (xor_result > 0)
+	for (nbits = 0; n || m; n >>= 1, m >>= 1)
 	{
-		if (xor_result & 1)
-			count++;
-			xor_result >>= 1;
+		if ((n & 1) != (m & 1))
+			nbits++;
 	}
 
-	return (count);
+	return (nbits);
 }

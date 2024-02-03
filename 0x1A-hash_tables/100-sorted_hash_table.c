@@ -214,6 +214,6 @@ void shash_table_delete(shash_table_t *ht)
 		ele = j;
 	}
 
-	free(head->array);
-	free(head);
+	free(new->array);
+	free(new);
 }
